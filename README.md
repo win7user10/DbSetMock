@@ -35,7 +35,7 @@ var data = new List<SomeEntity>
 {
   new SomeEntity()
 };
-var someDbSetMock = data.CreateMockedDbSet();
+var someDbSetMock = data.CreateMockFromDbSet();
 
 // Some mock additional setuping
 // someDbSetMock.Setup()
