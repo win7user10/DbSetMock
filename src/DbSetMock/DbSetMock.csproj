@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Ilya Belyanskiy</Authors>
+    <Company />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/win7user10/DbSetMock</RepositoryUrl>
+    <RepositoryType>Public</RepositoryType>
+    <Description>Package for creating mocked db sets to test places in code, which are use .FromSqlRaw() methods.</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
