@@ -8,9 +8,9 @@ If you have troubles with testing some code which executes direct queries to you
 string query = @"select smth from smth_table";
 
 var data = await _db.SomeDbSet
-	.FromSqlRaw(query)
-	.AsNoTracking()
-	.FirstOrDefaultAsync();
+  .FromSqlRaw(query)
+  .AsNoTracking()
+  .FirstOrDefaultAsync();
 //etc.
 ```
 
@@ -23,7 +23,7 @@ Create DB set which will returns some data for any query to this set like this
 ```csharp
 var data = new List<SomeEntity>
 {
-	new SomeEntity()
+  new SomeEntity()
 };
 YourDbContext.SomeDbSet = data.CreateMockedDbSet();
 ```
@@ -31,16 +31,13 @@ YourDbContext.SomeDbSet = data.CreateMockedDbSet();
 Or you can return the mock, which can be additionaly setuped.
 
 ```csharp
-string query = @"select smth from smth_table";
-
 var data = new List<SomeEntity>
 {
-	new SomeEntity()
+  new SomeEntity()
 };
 var someDbSetMock = data.CreateMockedDbSet();
 
 // Some mock additional setuping
 // someDbSetMock.Setup()
-
 YourDbContext.SomeDbSet = someDbSetMock.Object;
 ```
